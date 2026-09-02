@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Object</title>
+</head>
+<body>
+
+    <h2>Student Details</h2>
+
+    <div id="output"></div>
+
+    <script>
+
+        // Create an object
+        let student = {
+            name: "Sanjay",
+            age: 22,
+
+            // Method
+            sayHello: function() {
+                return "Hello, my name is " + this.name;
+            }
+        };
+
+        // Access properties
+        let output = "";
+
+        output += "Name: " + student.name + "<br>";
+        output += "Age: " + student.age + "<br><br>";
+
+        // Modify properties
+        student.name = "Kumar";
+        student.age = 23;
+
+        output += "<b>After Modification:</b><br>";
+        output += "Name: " + student.name + "<br>";
+        output += "Age: " + student.age + "<br><br>";
+
+        // Call object method
+        output += student.sayHello();
+
+        // Display output in HTML
+        document.getElementById("output").innerHTML = output;
+
+    </script>
+
+</body>
+</html>
